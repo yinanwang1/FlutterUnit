@@ -3,7 +3,6 @@ template-arb-file: l10n_zh.arb
 output-localization-file: l10n.dart
 
 
-synthetic-package: false
 output-dir: lib/src/l10n/gen
 output-class: PkgL10n
 nullable-getter: false

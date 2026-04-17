@@ -1,13 +1,10 @@
 import 'dart:async';
 
 import 'package:app/app.dart';
-import 'package:fx_dio/fx_dio.dart';
 import 'package:unit_env/unit_env.dart';
-import 'http.dart';
 
 void registerHttpClient(bool isZh) {
-  FxDio()
-      .register(const ScienceHost(), interceptors: [ScienceRepInterceptor()]);
+  FxDio().register(const ScienceHost(), repInterceptor: ScienceRepInterceptor());
   FxDio().register(const Unit3Host());
   FxDio().register(const UnitHost());
   UnitEnv.userName = '游客:${kAppMeta.uuid.substring(0, 6)}';
